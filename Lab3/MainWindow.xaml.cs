@@ -25,12 +25,36 @@ namespace Lab3
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        // Событие изменения значения на любом слайдере HSV
+        private void HSVSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            HSV testHSV = new HSV(201, 60, 35);
-            MyRGB testRGB = testHSV.ToRGB();
+            if (HueSlider.IsFocused || SaturationSlider.IsFocused || ValueSlider.IsFocused)
+            {
+                HSV HSVColor = new HSV((float)HueSlider.Value, (float)SaturationSlider.Value, (float)ValueSlider.Value);
+                MyRGB RGBColor = HSVColor.ToRGB();
 
-            Test.Fill = new SolidColorBrush(Color.FromRgb((byte)testRGB.Red, (byte)testRGB.Green, (byte)testRGB.Blue));
+                Test.Fill = new SolidColorBrush(Color.FromRgb((byte)RGBColor.Red, (byte)RGBColor.Green, (byte)RGBColor.Blue));
+
+                RedSlider.Value = RGBColor.Red;
+                GreenSlider.Value = RGBColor.Green;
+                BlueSlider.Value = RGBColor.Blue;
+            }
+        }
+
+        // Событие изменения значения на любом слайдере RGB
+        private void RGBSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (RedSlider.IsFocused || GreenSlider.IsFocused || BlueSlider.IsFocused)
+            {
+                MyRGB RGBColor = new MyRGB((float)RedSlider.Value, (float)GreenSlider.Value, (float)BlueSlider.Value);
+                HSV HSVColor = RGBColor.ToHSV();
+
+                Test.Fill = new SolidColorBrush(Color.FromRgb((byte)RGBColor.Red, (byte)RGBColor.Green, (byte)RGBColor.Blue));
+
+                HueSlider.Value = HSVColor.Hue;
+                SaturationSlider.Value = HSVColor.Saturation;
+                ValueSlider.Value = HSVColor.Value;
+            }
         }
     }
 }

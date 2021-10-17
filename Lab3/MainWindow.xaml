@@ -5,10 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="492" Width="890">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="202,316,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Rectangle x:Name="Test" HorizontalAlignment="Left" Height="100" Margin="472,236,0,0" Stroke="#FF020202" VerticalAlignment="Top" Width="100" Fill="Black"/>
+        <Rectangle x:Name="Test" HorizontalAlignment="Left" Height="80" Margin="15,217,0,0" Stroke="#FF020202" VerticalAlignment="Top" Width="853" Fill="Black"/>
+        <Slider x:Name="HueSlider" HorizontalAlignment="Left" Margin="120,69,0,0" VerticalAlignment="Top" Width="360" Height="18" ValueChanged="HSVSlider_ValueChanged" Maximum="360" SmallChange="1"/>
+        <Slider x:Name="SaturationSlider" HorizontalAlignment="Left" Margin="120,109,0,0" VerticalAlignment="Top" Width="360" Height="18" ValueChanged="HSVSlider_ValueChanged" Maximum="100" SmallChange="1"/>
+        <Slider x:Name="ValueSlider" HorizontalAlignment="Left" Margin="122,149,0,0" VerticalAlignment="Top" Width="360" Height="18" ValueChanged="HSVSlider_ValueChanged" Maximum="100" SmallChange="1"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="171" Margin="15,22,0,0" VerticalAlignment="Top" Width="473" Panel.ZIndex="-1"/>
+        <Label Content="Hue" HorizontalAlignment="Left" Margin="74,62,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Value" HorizontalAlignment="Left" Margin="64,142,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Saturation" HorizontalAlignment="Left" Margin="26,102,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="HSV" HorizontalAlignment="Left" Margin="224,22,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Slider x:Name="RedSlider" HorizontalAlignment="Left" Margin="601,69,0,0" VerticalAlignment="Top" Width="255" Maximum="255" SmallChange="1" ValueChanged="RGBSlider_ValueChanged"/>
+        <Slider x:Name="GreenSlider" HorizontalAlignment="Left" Margin="601,109,0,0" VerticalAlignment="Top" Width="255" Maximum="255" SmallChange="1" ValueChanged="RGBSlider_ValueChanged"/>
+        <Slider x:Name="BlueSlider" HorizontalAlignment="Left" Margin="601,149,0,0" VerticalAlignment="Top" Width="255" Maximum="255" SmallChange="1" ValueChanged="RGBSlider_ValueChanged"/>
+        <Label Content="Red" HorizontalAlignment="Left" Margin="553,62,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Green" HorizontalAlignment="Left" Margin="537,102,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Blue" HorizontalAlignment="Left" Margin="548,142,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="171" Margin="522,22,0,0" VerticalAlignment="Top" Width="346" Panel.ZIndex="-1"/>
+        <Label Content="RGB" HorizontalAlignment="Left" Margin="668,22,0,0" VerticalAlignment="Top" FontSize="24"/>
 
     </Grid>
 </Window>

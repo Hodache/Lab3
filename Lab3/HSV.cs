@@ -26,9 +26,35 @@ namespace Lab3
                 this.saturation = saturation;
                 this.value = value;
             }
+            else
+            {
+                this.hue = 0;
+                this.saturation = 100;
+                this.value = 100;
+            }
         }
 
         // Методы
+
+        // Переопределение метода Equals (для работы AreEqual в тестах)
+        public override bool Equals(Object obj)
+        {
+            bool isEqual;
+
+            if (!(obj is HSV))
+            {
+                isEqual = false;
+            }
+            else
+            {
+                HSV otherRGB = obj as HSV;
+                isEqual = hue == otherRGB.hue && saturation == otherRGB.saturation && value == otherRGB.value;
+            }
+
+            return isEqual;
+        }
+
+        //Перевод HSV в RGB
         public MyRGB ToRGB ()
         {
             int hCase = (int)Math.Floor(hue / 60) % 6;
