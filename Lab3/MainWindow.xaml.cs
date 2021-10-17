@@ -24,5 +24,13 @@ namespace Lab3
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HSV testHSV = new HSV(201, 60, 35);
+            MyRGB testRGB = testHSV.ToRGB();
+
+            Test.Fill = new SolidColorBrush(Color.FromRgb((byte)testRGB.Red, (byte)testRGB.Green, (byte)testRGB.Blue));
+        }
     }
 }
