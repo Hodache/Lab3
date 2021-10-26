@@ -57,13 +57,15 @@ namespace Lab3
         //Перевод HSV в RGB
         public MyRGB ToRGB ()
         {
-            int hCase = (int)Math.Floor(hue / 60) % 6;
+            // Вычисления необходимых величин
+            float hCase = (float)Math.Floor(hue / 60) % 6;
             float valueMin = (100 - saturation) * value / 100;
             float a = (value - valueMin) * (hue % 60 / 60);
             float valueInc = valueMin + a;
             float valueDec = value - a;
             MyRGB RGBColor = new MyRGB() { Red = (float)255/100, Green = (float)255 /100, Blue = (float)255 /100 };
 
+            // Определение параметров, в зависимости от hCase
             switch (hCase) {
                 case 0:
                     RGBColor.Red *= value;
@@ -97,6 +99,7 @@ namespace Lab3
                     break;
             }
 
+            // Округление полученных значений
             RGBColor.Red = (float)Math.Round(RGBColor.Red);
             RGBColor.Green = (float)Math.Round(RGBColor.Green);
             RGBColor.Blue = (float)Math.Round(RGBColor.Blue);
@@ -109,7 +112,15 @@ namespace Lab3
         {
             set
             {
-                if (value >= 0 && value <= 360)
+                if (value < 0)
+                {
+                    this.hue = 360 + (value % 360);
+                }
+                else if (value > 360)
+                {
+                    this.hue = value % 360;
+                }
+                else
                 {
                     this.hue = value;
                 }
