@@ -28,12 +28,12 @@
         <Label Content="Blue" HorizontalAlignment="Left" Margin="54,445,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="171" Margin="13,324,0,0" VerticalAlignment="Top" Width="407" Panel.ZIndex="-1" Grid.Column="1"/>
         <Label Content="RGB" HorizontalAlignment="Left" Margin="174,324,0,0" VerticalAlignment="Top" FontSize="24" Grid.Column="1"/>
-        <TextBox x:Name="HueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
-        <TextBox x:Name="SaturationTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
-        <TextBox x:Name="ValueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
-        <TextBox x:Name="RedTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
-        <TextBox x:Name="GreenTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
-        <TextBox x:Name="BlueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="HueTextBox_TextChanged" Text="0"/>
+        <TextBox x:Name="HueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
+        <TextBox x:Name="SaturationTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
+        <TextBox x:Name="ValueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
+        <TextBox x:Name="RedTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
+        <TextBox x:Name="GreenTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
+        <TextBox x:Name="BlueTextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="365,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" InputScope="Number" TextChanged="TextBoxes_TextChanged" KeyUp="TextBoxes_KeyUp" Text="0"/>
 
     </Grid>
 </Window>

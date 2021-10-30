@@ -8,46 +8,45 @@ namespace Lab3.Tests
     [TestClass()]
     public class HSVTests
     {
+        // Перевод зеленого в RGB
         [TestMethod()]
         public void HSVToGreen()
         {
-            // Перевод зеленого в RGB
             HSV color = new HSV(120, 100, 100);
-
             Assert.AreEqual(color.ToRGB(), new MyRGB(0, 255, 0));
         }
 
+        // Перевод красного в RGB
         [TestMethod()]
         public void HSVToRed()
         {
-            // Перевод красного в RGB
             HSV color = new HSV(0, 100, 100);
 
             Assert.AreEqual(color.ToRGB(), new MyRGB(255, 0 , 0));
         }
 
+        // Перевод синего в RGB
         [TestMethod()]
         public void HSVToBlue()
         {
-            // Перевод синего в RGB
             HSV color = new HSV(240, 100, 100);
 
             Assert.AreEqual(color.ToRGB(), new MyRGB(0, 0, 255));
         }
 
+        // Перевод серебряного в RGB
         [TestMethod()]
         public void HSVToSilver()
         {
-            // Перевод серебрянного в RGB
             HSV HSVColor = new HSV(150, 2, 79);
 
             Assert.AreEqual(HSVColor.ToRGB(), new MyRGB(197, 201, 199));
         }
 
+        // Перевод цианового в RGB
         [TestMethod()]
         public void HSVToCyan()
         {
-            // Перевод цианового в RGB
             HSV HSVColor = new HSV(180, 100, 100);
 
             Assert.AreEqual(HSVColor.ToRGB(), new MyRGB(0, 255, 255));

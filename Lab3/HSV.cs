@@ -37,7 +37,7 @@ namespace Lab3
         // Методы
 
         // Переопределение метода Equals (для работы AreEqual в тестах)
-        public override bool Equals(Object obj)
+        public override bool Equals(object obj)
         {
             bool isEqual;
 
@@ -58,7 +58,7 @@ namespace Lab3
         public MyRGB ToRGB ()
         {
             // Вычисления необходимых величин
-            float hCase = (float)Math.Floor(hue / 60) % 6;
+            int hCase = (int)Math.Floor(hue / 60) % 6;
             float valueMin = (100 - saturation) * value / 100;
             float a = (value - valueMin) * (hue % 60 / 60);
             float valueInc = valueMin + a;
@@ -78,7 +78,7 @@ namespace Lab3
                     RGBColor.Blue *= valueMin;
                     break;
                 case 2:
-                    RGBColor.Red *= valueMin;
+                    RGBColor.Red *= valueMin;   
                     RGBColor.Green *= value;
                     RGBColor.Blue *= valueInc;
                     break;

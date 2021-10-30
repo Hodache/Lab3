@@ -37,7 +37,7 @@ namespace Lab3
         // Методы
 
         // Переопределение метода Equals (для работы AreEqual в тестах)
-        public override bool Equals(Object obj)
+        public override bool Equals(object obj)
         {
             bool isEqual;
 
